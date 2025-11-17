@@ -1,6 +1,4 @@
-
 name: auth-workflow.yml
-
 
 on:
   push:
@@ -24,9 +22,6 @@ jobs:
           --health-timeout=5s 
           --health-retries=5
 
-    env:
-       MONGODBURL: "mongodb://localhost:27017/testdb"
-
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -38,14 +33,9 @@ jobs:
 
       - name: Install dependencies
         run: npm install
-        working-directory: Pace
 
-      - name: Wait for MongoDB
-        run: sleep 15
+      - name: Start app
+        run: npm start &
 
       - name: Run tests
-        run: npx jest --detectOpenHandles
-        working-directory: Pace
-        env:
-          MONGODB_URL: mongodb://mongo:27017/user-auth
-          NODE_ENV: test
+        run: npm test
