@@ -41,5 +41,5 @@ jobs:
         run: sleep 15
 
       - name: Run tests
-        run: npm test
+        run: npx jest
         working-directory: Pace
