@@ -46,3 +46,6 @@ jobs:
       - name: Run tests
         run: npx jest --detectOpenHandles
         working-directory: Pace
+        env:
+          MONGODB_URL: mongodb://mongo:27017/user-auth
+          NODE_ENV: test
