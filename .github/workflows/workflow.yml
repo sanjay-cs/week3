@@ -25,7 +25,7 @@ jobs:
           --health-retries=5
 
     env:
-      MONGO_URI: "mongodb://localhost:27017/testdb"
+       MONGODB_URL: "mongodb://localhost:27017/testdb"
 
     steps:
       - name: Checkout code
