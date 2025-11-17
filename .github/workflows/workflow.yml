@@ -1,8 +1,6 @@
-<<<<<<< HEAD
+
 name: auth-workflow.yml
-=======
-name: workflow.yml
->>>>>>> 52191e3 (Add local workflow folder)
+
 
 on:
   push:
