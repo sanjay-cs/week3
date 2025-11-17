@@ -2,7 +2,8 @@ name: auth-workflow
 on:
   push:
     branches: [main]
-    paths: ["*.js"]
+    paths:
+      - '**/*.js'
 jobs:
   test:
     runs-on: ubuntu-latest
