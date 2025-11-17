@@ -40,8 +40,5 @@ jobs:
         run: npm start &
 
       - name: Run tests
-<<<<<<< HEAD
         run: npm test
-=======
-        run: npm test
->>>>>>> 52191e3 (Add local workflow folder)
+
